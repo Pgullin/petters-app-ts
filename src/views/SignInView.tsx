@@ -11,7 +11,6 @@ const signIn = () =>{
 history.push(RoutingPaths.homeView)
 localStorage.setItem("User", loginCredentials.username)
 }
-
   return (
     <div>
       <h1>{loginCredentials.username}</h1>
