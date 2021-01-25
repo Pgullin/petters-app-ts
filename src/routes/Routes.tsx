@@ -1,6 +1,8 @@
 import {BrowserRouter, Switch, Route} from "react-router-dom"
+import RoutingPaths from "./RoutingPaths"
 import {HomeView} from "../views/HomeView"
 import {AboutView} from "../views/AboutView"
+import { SignInView } from "../views/SignInView"
 
 export const Routes = (props: {children: React.ReactChild}) =>{
   const {children} =props
@@ -9,8 +11,10 @@ export const Routes = (props: {children: React.ReactChild}) =>{
     <BrowserRouter>
     {children}
     <Switch>
-    <Route exact path={"/home"} component={HomeView}></Route>
-    <Route exact path={"/about"} component={AboutView}></Route>
+    <Route exact path={RoutingPaths.homeView} component={HomeView}></Route>
+    <Route exact path={RoutingPaths.aboutView} component={AboutView}></Route>
+    <Route exact path={RoutingPaths.signInView} component={SignInView}></Route>
+    <Route component={HomeView}></Route>
     </Switch>
     </BrowserRouter>
   )
