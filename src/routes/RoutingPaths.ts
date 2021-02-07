@@ -1,9 +1,13 @@
 const homeView = "/"
-const aboutView = "/about"
+const productsView = "/products"
 const signInView = "/signin"
+const brandsView = "/brands"
+const newsView = "/news"
 
 export default{
   homeView,
-  aboutView,
+  productsView,
+  brandsView,
+  newsView,
   signInView
 }
